@@ -15,7 +15,12 @@ const CombatOrder = ({ characters }) => {
 
   const handleRoll = (i, e) => {
     const newArr = [...participants]
-    newArr[i].roll = e.target.value - 0
+    const val = parseInt(e.target.value)
+    if(val === 0 || typeof val !== 'number' || Number.isNaN(val)) {
+      newArr[i].roll = ''
+    } else {
+      newArr[i].roll = val
+    }
     setParticipants(newArr);
   };
 
@@ -54,8 +59,8 @@ const CombatOrder = ({ characters }) => {
               id={`roll${i}`}
               name={`roll${i}`}
               key={`inp${i}`}
-              type="number"
               value={participant.roll}
+              type="number"
               onChange={(e) => handleRoll(i, e)}
               onBlur={(e) => handleRoll(i, e)}
             />
