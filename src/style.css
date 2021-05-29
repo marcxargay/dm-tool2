@@ -1,0 +1,28 @@
+/** Global styles **/
+* {
+  box-sizing: border-box;
+  color: #333;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/** Character Card **/
+
+.cc-wrapper {
+  display: flex;
+}
+
+.cc-aside {
+  width: 40%;
+}
+
+.cc-main {
+  width: 60%;
+}
+
+.cc-image {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "dm-tool",
+  "version": "1.0.0",
+  "description": "Tools for dungeon master",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcxargay/dm-tool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcxargay/dm-tool/issues"
+  },
+  "homepage": "https://github.com/marcxargay/dm-tool#readme",
+  "devDependencies": {
+    "parcel": "^1.12.3"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
