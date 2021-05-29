@@ -15,7 +15,7 @@ const CombatOrder = ({ characters }) => {
 
   const handleRoll = (i, e) => {
     const newArr = [...participants]
-    newArr[i].roll = parseInt(e.target.value)
+    newArr[i].roll = e.target.value - 0
     setParticipants(newArr);
   };
 
@@ -39,7 +39,7 @@ const CombatOrder = ({ characters }) => {
           onBlur={(e) => setNewParticipant(e.target.value)}
           className="addInput"
         />
-        <button onClick={(e) => addParticipant()}>Add</button>
+        <button className="addBtn" onClick={(e) => addParticipant()}>Add</button>
       </label>
       <button className="orderBtn" onClick={(e) => order(e)}>
         Order
@@ -48,16 +48,17 @@ const CombatOrder = ({ characters }) => {
         {participants.map((participant, i) => (
           <li key={`li-${i}`}>
             <label forhtml="roll" key={`lab${i}`}>
-              {participant.name} :
-              <input
-                id={`roll${i}`}
-                name={`roll${i}`}
-                key={`inp${i}`}
-                value={participant.roll}
-                onChange={(e) => handleRoll(i, e)}
-                onBlur={(e) => handleRoll(i, e)}
-              />
+              {participant.name}
             </label>
+            <input
+              id={`roll${i}`}
+              name={`roll${i}`}
+              key={`inp${i}`}
+              type="number"
+              value={participant.roll}
+              onChange={(e) => handleRoll(i, e)}
+              onBlur={(e) => handleRoll(i, e)}
+            />
             <button
               key={`btn-${i}`}
               className="removeParticipant"
@@ -65,7 +66,7 @@ const CombatOrder = ({ characters }) => {
                 removePostition(i);
               }}
             >
-              Remove
+              -
             </button>
           </li>
         ))}

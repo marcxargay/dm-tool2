@@ -5,6 +5,7 @@
 }
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fae8c3;
 }
 
 
@@ -25,4 +26,47 @@ body {
 .cc-image {
   width: 100%;
   height: auto;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+ol li label {
+  width: 100px;
+  display: inline-block;
+}
+ol li input {
+  width: 45px;
+  height: 45px;
+  margin-right: 12px;
+  border: 1px solid #fcad03;
+  background-color: #e8d5ac;
+}
+button {
+  border: 1px solid #fcad03;
+  background-color: #e8d5ac;
+}
+
+.addInput {
+  border: 1px solid #fcad03;
+  background-color: #e8d5ac;
+}
+.removeParticipant {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #fcad03;
+  background-color: #e8d5ac;
+}
+.orderBtn, .addBtn {
+  width: 100px;
+  height: 45px;
+  margin-left: 10px;
+}
+.addInput {
+  width: 200px;
+  height: 45px;;
+  border: 1px solid #fcad03;
+  background-color: #e8d5ac;
 }
